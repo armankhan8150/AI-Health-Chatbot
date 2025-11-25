@@ -65,13 +65,13 @@ streamlit run health_bot.py
 
 ---
 
-## How It Works
+## 🧠 How It Works
 1. **Sidebar collects API key**
+
 When the user types an API key and presses Enter: 
 ```python
 st.session_state.api_key = api_key_input
 ```
-
 ---
 
 2. **Chat messages saved in session**
@@ -79,6 +79,7 @@ st.session_state.api_key = api_key_input
 st.session_state.messages = [...]
 ```
 This creates a ChatGPT-style conversation loop.
+
 ---
 
 3. **Messages formatted for Gemini**\
