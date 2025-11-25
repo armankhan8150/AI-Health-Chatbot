@@ -49,4 +49,67 @@ python -m venv .venv
 ```bash
 source .venv/bin/activate
 ```
+---
+
+## Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run the App
+```bash
+streamlit run health_bot.py
+```
+
+---
+
+## How It Works
+1. **Sidebar collects API key**
+When the user types an API key and presses Enter: 
+```python
+st.session_state.api_key = api_key_input
+```
+
+---
+
+2. **Chat messages saved in session**
+```python
+st.session_state.messages = [...]
+```
+This creates a ChatGPT-style conversation loop.
+---
+
+3. **Messages formatted for Gemini**\
+```python
+{
+  "role": "user",
+  "parts": [{ "text": "message text here" }]
+}
+```
+
+---
+
+4. **Model generates response**
+```python
+model = genai.GenerativeModel("models/gemini-2.5-flash")
+response = model.generate_content(gemini_messages)
+```
+
+---
+
+5. **Response shown & added to chat**
+Displayed using:
+```python
+with st.chat_message("assistant"):
+    ...
+```
+
+---
+
+## ⚠️ Disclaimer
+This chatbot provides general informational health guidance only.
+It does not diagnose conditions, recommend treatments, or replace medical professionals.
+Always consult a licensed doctor for real medical concerns.
 
