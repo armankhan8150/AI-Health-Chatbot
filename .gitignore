@@ -1,0 +1,12 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python compiled files (junk files created when you run code)
+__pycache__/
+*.pyc
+
+# Local configuration (API keys, secrets)
+.env
