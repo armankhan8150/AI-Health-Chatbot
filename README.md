@@ -2,6 +2,8 @@
 
 A domain-specific AI chatbot that answers health and wellness questions using the **Groq API** and **Streamlit**.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-healthcare--bot.streamlit.app/)
+
 ---
 
 ## Domain
